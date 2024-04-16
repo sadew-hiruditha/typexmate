@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { generateScript } from "./GenetareScript";  // Import the function from GenerateScript.js
+import { generateScript } from "./GenetareScript"; // Import the function from GenerateScript.js
 
 function Topcontent() {
   const [name, setName] = useState("");
@@ -10,20 +10,20 @@ function Topcontent() {
   const [phonenumber, setPhonenumber] = useState("");
 
   const [isDownloaded, setIsDownloaded] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const clearFields = () => {
-    setName('');
-    setAddress('');
-    setEmail('');
-    setUniname('');
-    setPhonenumber('');
-    setError('');
+    setName("");
+    setAddress("");
+    setEmail("");
+    setUniname("");
+    setPhonenumber("");
+    setError("");
   };
 
   const handleClick = () => {
     if (!name || !address || !email || !uniname || !phonenumber) {
-      setError('All fields are required');
+      setError("All fields are required");
       return;
     }
 
@@ -32,12 +32,52 @@ function Topcontent() {
   };
 
   return (
-    <div className="grid sm:grid-cols-2 bg-[#0a001b] h-screen">
-       <div className=" p-10 justify-center sm:order-1 ">
+    <div className="grid sm:grid-cols-2 bg-[#0a001b] h-">
+      <div className=" p-10 justify-center sm:order-1 ">
         <h1 className="text-[white] text-[28px] mt-2 font-bold ">TypexMate.</h1>
-        <p className="text-[#dadadae7] font-light mt-10">
-        Welcome to TypexMate! Simplify your typing tasks with ease. TypexMate is your go-to solution for generating AHK scripts effortlessly. Say goodbye to manual typing woes and hello to streamlined productivity. Input your details, download your custom script, and let TypexMate do the heavy lifting. Transform your typing experience today!
-        </p>
+        <div className="text-[#dadadae7]">
+          <p className="text-[#dadadae7] font-light mt-10">
+            Welcome to TypexMate! Simplify your typing tasks with ease.
+            TypexMate is your go-to solution for generating AHK scripts
+            effortlessly. Say goodbye to manual typing woes and hello to
+            streamlined productivity. Input your details, download your custom
+            script, and let TypexMate do the heavy lifting. Transform your
+            typing experience today!
+          </p>
+
+          <div className="border mt-10 rounded-lg bg-[rgba(255,255,255,0.13)] p-10">
+          <p className="font-bold mb-5 un">short name with ;</p>
+
+            <p>name;</p>
+            <p>add;</p>
+            <p>email;</p>
+            <p>num;</p>
+            <p>degree;</p>
+          </div>
+
+          <div className="border mt-10 rounded-lg bg-[rgba(255,255,255,0.13)] p-10">
+            <p className="font-bold mb-5 un">short name + space</p>
+            <p>mon</p>
+            <p>tue</p>
+            <p>wed</p>
+            <p>thu</p>
+            <p>fri</p>
+            <p>sat</p>
+            <p>sun</p>
+            <p>jan</p>
+            <p>feb</p>
+            <p>mar</p>
+            <p>apr</p>
+            <p>may</p>
+            <p>jun</p>
+            <p>jul</p>
+            <p>aug</p>
+            <p>sep</p>
+            <p>oct</p>
+            <p>nov</p>
+            <p>dec</p>
+          </div>
+        </div>
       </div>
       <div className="bg-[#121212] text-center  sm:rounded-r-[50px] bg-gradient-to-br from-[rgb(22,22,22)] to-[rgb(48,48,48)] text-[black] ">
         <form>
@@ -53,7 +93,7 @@ function Topcontent() {
                 type="text"
                 id="text"
                 value={name}
-                onChange={(e)=>setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
                 className="bg-[#474747] border border-[#696969] text-[#d1d1d1] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none "
                 placeholder="Enter your full name"
                 required
@@ -70,7 +110,7 @@ function Topcontent() {
                 type="text"
                 id="address"
                 value={address}
-                onChange={(e)=>setAddress(e.target.value)}
+                onChange={(e) => setAddress(e.target.value)}
                 className="bg-[#474747] border border-[#696969] text-[#d1d1d1] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none "
                 placeholder="Enter your address"
                 required
@@ -87,7 +127,7 @@ function Topcontent() {
                 type="email"
                 id="text"
                 value={email}
-                onChange={(e)=>setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 className="bg-[#474747] border border-[#696969] text-[#d1d1d1] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none "
                 placeholder="Enter your email"
                 required
@@ -104,7 +144,7 @@ function Topcontent() {
                 type="text"
                 id="mobile"
                 value={phonenumber}
-                onChange={(e)=>setPhonenumber(e.target.value)}
+                onChange={(e) => setPhonenumber(e.target.value)}
                 className="bg-[#474747] border border-[#696969] text-[#d1d1d1] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none "
                 placeholder="Mobile number"
                 required
@@ -121,13 +161,12 @@ function Topcontent() {
                 type="email"
                 id="text"
                 value={uniname}
-                onChange={(e)=>setUniname(e.target.value)}
+                onChange={(e) => setUniname(e.target.value)}
                 className="bg-[#474747] border border-[#696969] text-[#d1d1d1] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none "
                 placeholder="Enter your Degree Name"
                 required
               />
             </div>
-           
           </div>
 
           <button
@@ -137,10 +176,8 @@ function Topcontent() {
           >
             Download
           </button>
-         
         </form>
       </div>
-     
     </div>
   );
 }

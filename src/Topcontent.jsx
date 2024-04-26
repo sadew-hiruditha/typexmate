@@ -33,7 +33,7 @@ function Topcontent() {
 
   return (
     <div className="grid sm:grid-cols-2 bg-[#0a001b] h-">
-      <div className=" p-10 justify-center sm:order-1 ">
+      <div className="h-screen overflow-auto p-10 justify-center sm:order-1  " >
         <h1 className="text-[white] text-[28px] mt-2 font-bold ">TypexMate.</h1>
         <div className="text-[#dadadae7]">
           <p className="text-[#dadadae7] font-light mt-10">
@@ -45,7 +45,7 @@ function Topcontent() {
             typing experience today!
           </p>
 
-          <div className="border mt-10 rounded-lg bg-[rgba(255,255,255,0.13)] p-10">
+          <div className="border border-[#424242] mt-10 rounded-lg bg-[rgba(255,255,255,0.13)] p-10">
           <p className="font-bold mb-5 un">short name with ;</p>
 
             <p>name;</p>
@@ -55,7 +55,9 @@ function Topcontent() {
             <p>degree;</p>
           </div>
 
-          <div className="border mt-10 rounded-lg bg-[rgba(255,255,255,0.13)] p-10">
+<div className="grid grid-cols-2">
+  
+<div className="border mt-10 border-[#424242] rounded-lg bg-[rgba(255,255,255,0.13)] p-10">
             <p className="font-bold mb-5 un">short name + space</p>
             <p>mon</p>
             <p>tue</p>
@@ -77,9 +79,13 @@ function Topcontent() {
             <p>nov</p>
             <p>dec</p>
           </div>
+
+</div>
+
+
         </div>
       </div>
-      <div className="bg-[#121212] text-center  sm:rounded-r-[50px] bg-gradient-to-br from-[rgb(22,22,22)] to-[rgb(48,48,48)] text-[black] ">
+      <div className=" text-center  rounded-[20px] bg-gradient-to-br from-[hsla(249,100%,6%,0)] to-[rgb(33,0,59)] text-[black] m-5">
         <form>
           <div className="mt-10">
             <div class="p-5">
@@ -176,6 +182,7 @@ function Topcontent() {
           >
             Download
           </button>
+          
         </form>
       </div>
     </div>

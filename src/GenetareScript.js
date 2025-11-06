@@ -1,4 +1,13 @@
-export const generateScript = (name, address, email, degree, phonenumber) => {
+export const generateScript = (name, address, email, degree, phonenumber, customHotstrings = []) => {
+    // Generate custom hotstrings section
+    const customHotstringsScript = customHotstrings.length > 0
+        ? '\n; Custom Hotstrings\n' + customHotstrings.map(item => 
+            `:*:${item.shortcut}::
+    Send, ${item.replacement}
+    return`
+          ).join('\n\n')
+        : '';
+
     const ahkScript = `
     #SingleInstance Force
     SetWorkingDir, %A_ScriptDir%
@@ -50,7 +59,7 @@ export const generateScript = (name, address, email, degree, phonenumber) => {
     
     :*:num;:: 
         Send, %replacement_phonenumber%
-        return
+        return${customHotstringsScript}
     `;
   
     // Create a Blob and initiate download

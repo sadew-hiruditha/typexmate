@@ -67,10 +67,9 @@ export const generateScript = (name, address, email, degree, phonenumber, custom
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "AutoHotKeyScript.ahk";
+    a.download = "AutoHotkeyScript.ahk";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-  

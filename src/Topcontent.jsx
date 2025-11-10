@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { generateScript } from "./GenetareScript"; // Import the function from GenerateScript.js
+import { generateScript } from "./GenerateScript";
 import LivePreview from "./LivePreview";
 import DragDropZone from "./DragDropZone";
 import CustomHotstringBuilder from "./CustomHotstringBuilder";
+import demoVideo from "./assets/Shortcut.mp4";
 
 function Topcontent() {
   const [name, setName] = useState("");
@@ -227,9 +228,8 @@ function Topcontent() {
             <p className={`font-light leading-relaxed ${
               isDarkMode ? 'text-[#dadadae7]' : 'text-gray-700'
             }`}>
-              Simplify your typing tasks with ease. TypexMate is your go-to solution for generating AutoHotkey scripts 
-              effortlessly. Say goodbye to manual typing and hello to streamlined productivity. Input your details, 
-              download your custom script, and let TypexMate do the heavy lifting. Transform your typing experience today!
+              Create keyboard shortcuts for your name, email, address, and more. Fill in your details, download the script, 
+              and type faster with custom shortcuts!
             </p>
           </div>
         </div>
@@ -399,6 +399,32 @@ function Topcontent() {
                 ✓ Script downloaded successfully!
               </div>
             )}
+
+            {/* Demo Video */}
+            <div className={`mt-6 rounded-lg overflow-hidden border ${
+              isDarkMode 
+                ? 'border-[#424242] bg-[rgba(255,255,255,0.05)]'
+                : 'border-gray-300 bg-white shadow-sm'
+            }`}>
+              <div className="p-4">
+                <h3 className={`font-semibold text-sm mb-3 ${
+                  isDarkMode ? 'text-[white]' : 'text-gray-900'
+                }`}>
+                  🎬 See How It Works
+                </h3>
+                <video 
+                  controls 
+                  autoPlay
+                  muted
+                  loop
+                  className="w-full rounded-lg"
+                  poster=""
+                >
+                  <source src={demoVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
           
         </form>
